@@ -3,7 +3,7 @@ import { Mutation } from "react-apollo";
 import { gql } from "apollo-boost";
 import { RouteComponentProps } from "react-router-dom";
 
-//import { RegisterMutationVariables, RegisterMutation } from "../../schemaTypes";
+import { RegisterMutationVariables, RegisterMutation } from "../../schemaTypes";
 
 const registerMutation = gql`
   mutation RegisterMutation($email: String!, $password: String!) {
