@@ -1,3 +1,25 @@
+
+### Some custom commands to auto-generate types pulled from the graphql server
+
+#### From package.json scripts 
+
+1. Download the Schema from the graphql server.
+```
+"schema:download": "apollo schema:download --endpoint=http://localhost:4000/graphql"
+```
+2. Look through all files ending in .tsx for queries, then autogenerates a single large types file.
+```
+"codegen:generate": "apollo codegen:generate --queries=./src/**/*.tsx --schema=./schema.json --outputFlat --target=typescript ./src/schemaTypes.ts"
+```
+3. Runs scripts 1 and 2.
+```
+"gen:types": "npm run schema:download && npm run codegen:generate"
+```
+
+
+
+# Everything Below this line is boilerplate README. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
