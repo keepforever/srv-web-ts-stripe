@@ -1,0 +1,16 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: stripe-example
+    # before adding ports, this error was happening in local
+    # development: Error: connect ECONNREFUSED 127.0.0.1:5432
+    ports:
+    - "5432:5432"
