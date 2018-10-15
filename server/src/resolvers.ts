@@ -18,6 +18,9 @@ export const resolvers: IResolvers = {
   Mutation: {
     // first arg, "parent", we pass "_" because don't care about it
     register: async (_, {email, password}) => {
+      // Note: must use sudo-valid email when registering or else 
+      // the stripe interface will not let you proceed and there 
+
       // hash password for security, bcrypt.hash() is async func
       const hashedPassword = await bcrypt.hash(password, 10 )
       await User.create({
