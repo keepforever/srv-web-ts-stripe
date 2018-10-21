@@ -1,6 +1,0 @@
-// REACT_APP_STRIPE_PUBLISHABLE=pk_test_oDGzzx7emdCdmB8wezqtzLkv
-
-// Server .env
-// STRIPE_SECRET=sk_test_CLFmXOtAHzp6ClOOWaNXG8ZL
-// STRIPE_TEST_PLAN_ID=plan_DnCwJSPkZQGoeP
-// TEST=ABCDEFG
